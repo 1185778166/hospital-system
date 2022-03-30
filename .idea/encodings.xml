@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/hospital-common/common-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-common/rabbit-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-common/service-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-feign/appointment-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-feign/common-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-feign/order-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-manage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-service/appointment-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-service/common-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-service/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-service/oss-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-service/sms-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-service/statistics-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-service/user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+  </component>
+</project>

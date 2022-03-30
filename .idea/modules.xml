@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hospital-feign/appointment-feign/appointment-feign.iml" filepath="$PROJECT_DIR$/hospital-feign/appointment-feign/appointment-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-service/appointment-service/appointment-service.iml" filepath="$PROJECT_DIR$/hospital-service/appointment-service/appointment-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-feign/common-feign/common-feign.iml" filepath="$PROJECT_DIR$/hospital-feign/common-feign/common-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-service/common-service/common-service.iml" filepath="$PROJECT_DIR$/hospital-service/common-service/common-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-common/common-util/common-util.iml" filepath="$PROJECT_DIR$/hospital-common/common-util/common-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital.iml" filepath="$PROJECT_DIR$/hospital.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-common/hospital-common.iml" filepath="$PROJECT_DIR$/hospital-common/hospital-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-entity/hospital-entity.iml" filepath="$PROJECT_DIR$/hospital-entity/hospital-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-feign/hospital-feign.iml" filepath="$PROJECT_DIR$/hospital-feign/hospital-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-gateway/hospital-gateway.iml" filepath="$PROJECT_DIR$/hospital-gateway/hospital-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-manage/hospital-manage.iml" filepath="$PROJECT_DIR$/hospital-manage/hospital-manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-service/hospital-service.iml" filepath="$PROJECT_DIR$/hospital-service/hospital-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-system.iml" filepath="$PROJECT_DIR$/hospital-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-feign/order-feign/order-feign.iml" filepath="$PROJECT_DIR$/hospital-feign/order-feign/order-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-service/order-service/order-service.iml" filepath="$PROJECT_DIR$/hospital-service/order-service/order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-service/oss-service/oss-service.iml" filepath="$PROJECT_DIR$/hospital-service/oss-service/oss-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-common/rabbit-util/rabbit-util.iml" filepath="$PROJECT_DIR$/hospital-common/rabbit-util/rabbit-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-common/service-util/service-util.iml" filepath="$PROJECT_DIR$/hospital-common/service-util/service-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-service/sms-service/sms-service.iml" filepath="$PROJECT_DIR$/hospital-service/sms-service/sms-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-service/statistics-service/statistics-service.iml" filepath="$PROJECT_DIR$/hospital-service/statistics-service/statistics-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital-service/user-service/user-service.iml" filepath="$PROJECT_DIR$/hospital-service/user-service/user-service.iml" />
+    </modules>
+  </component>
+</project>

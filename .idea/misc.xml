@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-common/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-common/common-util/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-common/rabbit-util/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-common/servicce-util/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-manage/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-entity/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-service/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-service/common-service/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-service/appointment-service/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-service/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-service/order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-service/oss-service/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-service/sms-service/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-service/statistics-service/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-feign/common-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-feign/appointment-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-feign/order-feign/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
