@@ -13,6 +13,21 @@
     <name>service-common</name>
     <description>Service Common project for Spring Boot</description>
     <dependencies>
-
+        <dependency>
+            <groupId>com.maxt.system.hospital.common</groupId>
+            <artifactId>common-util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
+
+    <build>
+        <finalName>service-common</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

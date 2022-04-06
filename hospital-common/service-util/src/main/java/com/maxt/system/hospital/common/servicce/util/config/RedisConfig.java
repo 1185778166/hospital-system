@@ -34,17 +34,14 @@ public class RedisConfig {
      */
     @Bean
     public KeyGenerator keyGenerator(){
-        return new KeyGenerator(){
-            @Override
-            public Object generate(Object target, Method method, Object... params) {
-                StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append(target.getClass().getName());
-                stringBuilder.append(method.getName());
-                for (Object param : params) {
-                    stringBuilder.append(param.toString());
-                }
-                return stringBuilder.toString();
+        return (target, method, params) -> {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append(target.getClass().getName());
+            stringBuilder.append(method.getName());
+            for (Object param : params) {
+                stringBuilder.append(param.toString());
             }
+            return stringBuilder.toString();
         };
     }
 

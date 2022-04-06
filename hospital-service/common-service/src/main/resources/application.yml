@@ -1,0 +1,21 @@
+# 服务端口
+server:
+  port: 8202
+# 服务名
+
+spring:
+  application:
+    name: common-service
+  # 设置环境dev、test、prod
+  profiles:
+    active: dev
+  # 数据连接
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hospital_common?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+    username: root
+    password: root1234
+  # 返回json的全局时间格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8

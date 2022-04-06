@@ -17,6 +17,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>hospital-feign</name>
     <description>Hospital Feign project for Spring Boot</description>
+    <packaging>pom</packaging>
     <dependencies>
 
     </dependencies>

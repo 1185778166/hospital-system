@@ -11,9 +11,15 @@
     <artifactId>appointment</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>appointment-service</name>
+    <packaging>jar</packaging>
     <description>Appointment Service project for Spring Boot</description>
     <dependencies>
-
+        <dependency>
+            <groupId>com.maxt.system.hospital.common</groupId>
+            <artifactId>common-util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     <build>
         <finalName>appointment-service</finalName>

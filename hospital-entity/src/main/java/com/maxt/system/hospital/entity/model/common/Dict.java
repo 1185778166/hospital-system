@@ -65,6 +65,7 @@ public class Dict {
     private String dictCode;
 
     @ApiModelProperty(value = "是否包含子节点")
+    //为树形组件所需字典，标识为数据库不存在
     @TableField(exist = false)
     private boolean hasChildren;
 }

@@ -87,6 +87,14 @@ public class Result<T> {
         return this;
     }
 
+    public static Result result(boolean result){
+        if (result){
+            return Result.ok();
+        }else {
+            return Result.fail();
+        }
+    }
+
     public boolean isOk(){
         if (this.getCode().intValue() == ResultCodeEnum.SUCCESS.getCode().intValue()){
             return true;

@@ -1,5 +1,6 @@
 package com.maxt.system.hospital.entity.vo.hospital;
 
+import com.maxt.system.hospital.entity.page.PageVo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -15,7 +16,7 @@ import java.io.Serializable;
 
 @Data
 @ApiModel(description = "Hospital")
-public class HospitalQueryVo implements Serializable {
+public class HospitalQueryVo extends PageVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	

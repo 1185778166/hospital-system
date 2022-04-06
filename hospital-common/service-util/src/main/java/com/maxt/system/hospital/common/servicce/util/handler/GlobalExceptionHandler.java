@@ -19,13 +19,13 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public Result error(Exception e){
         e.printStackTrace();
-        return Result.fail();
+        return Result.build(500, e.getMessage());
     }
 
     @ExceptionHandler(HospitalException.class)
     @ResponseBody
     public Result error(HospitalException e){
         e.printStackTrace();
-        return Result.fail();
+        return Result.build(e.getCode(), e.getMessage());
     }
 }
