@@ -1,7 +1,9 @@
 package com.maxt.system.hospital.service.common.service;
 
 import com.maxt.system.hospital.entity.model.common.Dict;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -18,4 +20,16 @@ public interface IDictService {
      * @return
      */
     List<Dict> findChildData(Long id);
+
+    /**
+     * 导出
+     * @param response
+     */
+    void exportData(HttpServletResponse response);
+
+    /**
+     * 导入
+     * @param file
+     */
+    void importDictData(MultipartFile file);
 }
