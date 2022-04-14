@@ -18,7 +18,16 @@
             <groupId>com.maxt.system.hospital.common</groupId>
             <artifactId>common-util</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.maxt.system.hospital.common</groupId>
+            <artifactId>servicce-util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+<!--        mongodb-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
     </dependencies>
     <build>

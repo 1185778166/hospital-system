@@ -2,11 +2,14 @@ package com.maxt.system.hospital.service.appointment.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.maxt.system.hospital.common.common.util.exception.HospitalException;
+import com.maxt.system.hospital.common.common.util.result.ResultCodeEnum;
 import com.maxt.system.hospital.common.common.util.util.MD5Utils;
 import com.maxt.system.hospital.entity.model.hospital.HospitalSet;
 import com.maxt.system.hospital.entity.vo.hospital.HospitalQueryVo;
 import com.maxt.system.hospital.service.appointment.mapper.HospitalSetMapper;
 import com.maxt.system.hospital.service.appointment.service.IHospitalSetService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -22,6 +25,7 @@ import java.util.Random;
  * @Description
  */
 @Service
+@Slf4j
 public class HospitalSetServiceImpl implements IHospitalSetService {
 
     @Autowired
@@ -101,6 +105,22 @@ public class HospitalSetServiceImpl implements IHospitalSetService {
         String hosCode = hospitalSet.getHosCode();
         //todo 发送短信
         return true;
+    }
+
+    @Override
+    public String getSignKey(String hosCode) {
+        HospitalSet hospitalSet = this.getByHosCode(hosCode);
+        if (null == hospitalSet){
+            throw new HospitalException(ResultCodeEnum.HOSPITAL_OPEN);
+        }
+        if (hospitalSet.getStatus().intValue() == 0){
+            throw new HospitalException(ResultCodeEnum.HOSPITAL_LOCK);
+        }
+        return hospitalSet.getSignKey();
+    }
+
+    private HospitalSet getByHosCode(String hosCode) {
+        return hospitalSetMapper.selectOne(new LambdaQueryWrapper<HospitalSet>().eq(HospitalSet::getHosCode, hosCode));
     }
 
     private boolean result(long count, String message){

@@ -34,7 +34,6 @@ public class HospitalSetController {
     @ApiOperation(value = "获取所有医院设置")
     @GetMapping("findAll")
     public Result findAllHospitalSet(){
-        int i = 1/0;
         List<HospitalSet> list = hospitalSetService.listAll();
         return Result.ok(list);
     }
@@ -47,6 +46,7 @@ public class HospitalSetController {
     @ApiOperation(value = "逻辑删除医院设置")
     @DeleteMapping("{id}")
     public Result removeHospitalSet(@PathVariable Long id){
+        int i = 1/0;
         boolean flag = hospitalSetService.removeById(id);
         return Result.result(flag);
     }

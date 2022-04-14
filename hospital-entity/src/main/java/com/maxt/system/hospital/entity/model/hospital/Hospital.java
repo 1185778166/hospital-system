@@ -1,6 +1,7 @@
 package com.maxt.system.hospital.entity.model.hospital;
 
 import com.alibaba.fastjson.JSONObject;
+import com.maxt.system.hospital.entity.model.base.BaseMongoEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -16,7 +17,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @ApiModel(description = "Hospital")
 @Document("Hospital")
-public class Hospital {
+public class Hospital extends BaseMongoEntity {
 
 
     private static final long serialVersionUID = 1L;

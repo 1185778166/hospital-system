@@ -76,4 +76,12 @@ public interface IHospitalSetService {
      * @return
      */
     boolean sendKey(Long id);
+
+
+    /**
+     * 获取签名key
+     * @param hosCode
+     * @return
+     */
+    String getSignKey(String hosCode);
 }

@@ -1,5 +1,6 @@
 package com.maxt.system.hospital.entity.model.hospital;
 
+import com.maxt.system.hospital.entity.model.base.BaseMongoEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -15,7 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @ApiModel(description = "")
 @Document("Department")
-public class Department {
+public class Department extends BaseMongoEntity {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "医院编号")
