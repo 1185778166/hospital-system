@@ -2,6 +2,7 @@ package com.maxt.system.hospital.service.common.service.impl;
 
 import com.alibaba.excel.EasyExcel;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.maxt.system.hospital.entity.model.common.Dict;
 import com.maxt.system.hospital.entity.vo.common.DictEeVo;
 import com.maxt.system.hospital.service.common.listener.DictListener;
@@ -21,6 +22,7 @@ import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @Author Maxt
@@ -114,5 +116,37 @@ public class DictServiceImpl implements IDictService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    @Cacheable(value = "dict", keyGenerator = "keyGenerator")
+    public String getNameByParentDictCodeAndValue(String parentDictCode, String value) {
+        //如果value能唯一定位数据字典，parentDictCode可以传空，例如省市区的value值能够唯一确定
+        if (StringUtils.isEmpty(parentDictCode)) {
+            Dict dict = dictMapper.selectOne(new QueryWrapper<Dict>().eq("value", value));
+            if (null != dict) {
+                return dict.getName();
+            }
+        } else {
+            Dict parentDict = dictMapper.selectOne(new LambdaQueryWrapper<Dict>().eq(Dict::getDictCode, parentDictCode));
+            if (null == parentDict) {
+                return "";
+            }
+            Dict dict = dictMapper.selectOne(new LambdaQueryWrapper<Dict>().eq(Dict::getParentId, parentDict.getParentId())
+                    .eq(Dict::getValue, value));
+            if (null != dict) {
+                return dict.getName();
+            }
+        }
+        return "";
+    }
+
+    @Override
+    public List<Dict> findByDictCode(String dictCode) {
+        Dict dict = dictMapper.selectOne(new LambdaQueryWrapper<Dict>().eq(Dict::getDictCode, dictCode));
+        if (!Optional.of(dict).isPresent()){
+            return null;
+        }
+        return this.findChildData(dict.getId());
     }
 }

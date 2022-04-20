@@ -32,4 +32,19 @@ public interface IDictService {
      * @param file
      */
     void importDictData(MultipartFile file);
+
+    /**
+     * 根据上级编号与值获取数据字典名称
+     * @param parentDictCode
+     * @param value
+     * @return
+     */
+    String getNameByParentDictCodeAndValue(String parentDictCode, String value);
+
+    /**
+     * 根据dictCode获取下级节点
+     * @param dictCode
+     * @return
+     */
+    List<Dict> findByDictCode(String dictCode);
 }
