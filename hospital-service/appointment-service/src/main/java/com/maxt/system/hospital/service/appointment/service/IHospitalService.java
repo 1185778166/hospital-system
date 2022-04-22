@@ -5,6 +5,7 @@ import com.maxt.system.hospital.entity.vo.hospital.HospitalQueryVo;
 import io.swagger.models.auth.In;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -50,4 +51,19 @@ public interface IHospitalService {
      * @return
      */
     Map<String, Object> show(String id);
+
+    /**
+     * 根据医院名称获取医院列表
+     * @param hosName
+     * @return
+     */
+    List<Hospital> findByHosName(String hosName);
+
+    /**
+     * 医院预约挂号详情
+     * @param hosCode
+     * @return
+     */
+    Map<String, Object> item(String hosCode);
+
 }

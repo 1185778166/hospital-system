@@ -3,6 +3,8 @@ package com.maxt.system.hospital.service.appointment.reposity;
 import com.maxt.system.hospital.entity.model.hospital.Hospital;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
+import java.util.List;
+
 /**
  * @Author Maxt
  * @Date 2022/4/13 12:10
@@ -16,4 +18,11 @@ public interface HospitalRepository extends MongoRepository<Hospital, String> {
      * @return
      */
     Hospital getHospitalByHosCode(String hosCode);
+
+    /**
+     * 根据医院名称获取医院列表
+     * @param hosName
+     * @return
+     */
+    List<Hospital> findHospitalByHosNameLike(String hosName);
 }

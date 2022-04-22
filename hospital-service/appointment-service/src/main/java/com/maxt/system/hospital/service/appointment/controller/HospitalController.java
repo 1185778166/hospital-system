@@ -3,7 +3,6 @@ package com.maxt.system.hospital.service.appointment.controller;
 import com.maxt.system.hospital.common.common.util.result.Result;
 import com.maxt.system.hospital.entity.vo.hospital.HospitalQueryVo;
 import com.maxt.system.hospital.service.appointment.service.IHospitalService;
-import com.maxt.system.hospital.service.appointment.service.impl.HospitalServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -21,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api("医院管理接口")
 @RestController
-@RequestMapping("/admin/hospital")
+@RequestMapping("/admin/hospital/hospital")
 public class HospitalController {
 
     @Autowired
@@ -47,5 +46,12 @@ public class HospitalController {
     @GetMapping("show/{id}")
     public Result show(@ApiParam(name = "id", value = "医院id", required = true) @PathVariable String id){
         return Result.ok(hospitalService.show(id));
+    }
+
+    @ApiOperation("根据医院名称获取医院列表")
+    @GetMapping("findByHosName/{hosName}")
+    public Result findByHosName(@ApiParam(name = "hosName", value = "医院名称", required = true)
+                                    @PathVariable String hosName){
+        return Result.ok(hospitalService.findByHosName(hosName));
     }
 }

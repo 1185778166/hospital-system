@@ -2,8 +2,10 @@ package com.maxt.system.hospital.service.appointment.service;
 
 import com.maxt.system.hospital.entity.model.hospital.Department;
 import com.maxt.system.hospital.entity.vo.hospital.DepartmentQueryVo;
+import com.maxt.system.hospital.entity.vo.hospital.DepartmentVo;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -36,4 +38,18 @@ public interface IDepartmentService {
      */
     void remove(String hosCode, String depCode);
 
+    /**
+     * 根据医院编号，查询医院所有科室列表
+     * @param hosCode
+     * @return
+     */
+    List<DepartmentVo> findDeptTree(String hosCode);
+
+    /**
+     * 根据科室编号和医院编号，查询科室名称
+     * @param hosCode
+     * @param depCode
+     * @return
+     */
+    String getDepName(String hosCode, String depCode);
 }

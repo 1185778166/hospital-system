@@ -9,6 +9,7 @@ import com.maxt.system.hospital.service.appointment.mapper.HospitalSetMapper;
 import com.maxt.system.hospital.service.appointment.reposity.HospitalRepository;
 import com.maxt.system.hospital.service.appointment.service.IHospitalService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -107,6 +109,16 @@ public class HospitalServiceImpl implements IHospitalService {
         return result;
     }
 
+    /**
+     * 根据医院名称获取医院列表
+     * @param hosName
+     * @return
+     */
+    @Override
+    public List<Hospital> findByHosName(String hosName) {
+        return hospitalRepository.findHospitalByHosNameLike(hosName);
+    }
+
     private Hospital packHospital(Hospital hospital) {
         String hosTypeString = dictFeignClient.getName(DictEnum.HOSPITAL.getDictCode(), hospital.getHosType());
         String provinceString = dictFeignClient.getName(hospital.getProvinceCode());
@@ -115,5 +127,18 @@ public class HospitalServiceImpl implements IHospitalService {
         hospital.getParam().put("hosTypeString", hosTypeString);
         hospital.getParam().put("fullAddress", provinceString + cityString + districtString + hospital.getAddress());
         return hospital;
+    }
+
+    @Override
+    public Map<String, Object> item(String hosCode) {
+        Map<String, Object> result = new HashMap<>();
+        //医院详情
+        Hospital hospital = this.packHospital(this.getByHosCode(hosCode));
+        result.put("hospital", hospital);
+        //预约规则
+        result.put("bookingRule", hospital.getBookingRule());
+        //不需要重复返回
+        hospital.setBookingRule(null);
+        return result;
     }
 }
