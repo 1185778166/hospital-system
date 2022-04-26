@@ -1,4 +1,4 @@
-package com.maxt.system.hospital.service.appointment.controller.api;
+package com.maxt.system.hospital.service.appointment.controller;
 
 import com.maxt.system.hospital.common.common.util.exception.HospitalException;
 import com.maxt.system.hospital.common.common.util.result.Result;
@@ -33,7 +33,7 @@ import java.util.Map;
 @Api(tags = "医院管理API接口")
 @RestController
 @RequestMapping("/api/hospital")
-public class ApiController {
+public class HospitalApiController {
 
     @Autowired
     IHospitalService hospitalService;

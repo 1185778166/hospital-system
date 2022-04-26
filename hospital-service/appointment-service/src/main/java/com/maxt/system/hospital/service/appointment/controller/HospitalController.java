@@ -54,4 +54,9 @@ public class HospitalController {
                                     @PathVariable String hosName){
         return Result.ok(hospitalService.findByHosName(hosName));
     }
+    @ApiOperation("医院预约挂号详情")
+    @GetMapping("{hosCode}")
+    public Result item(@ApiParam(name = "hosCode", value = "医院Code", required = true) @PathVariable String hasCode){
+        return Result.ok(hospitalService.item(hasCode));
+    }
 }
